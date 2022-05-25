@@ -1,3 +1,9 @@
+//This variable stores the button a user presses to see their future
+let button = document.getElementById('button1');
+
+//This variable stores an empty string which will becomes the user's future
+let future = document.getElementById('future');
+
 const crystalBall = () => {
     theAction = Math.floor(Math.random() * 30);
     thePerson = Math.floor(Math.random() * 30);
@@ -197,3 +203,11 @@ const crystalBall = () => {
 
     return sentence;
 }
+
+function prediction(event){
+    future.innerHTML = crystalBall();
+}
+
+button.onclick = prediction;
+
+
